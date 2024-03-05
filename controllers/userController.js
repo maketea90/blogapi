@@ -144,12 +144,12 @@ exports.signupPOST = [
     .populate('comments')
     .populate('author')
     .sort({timestamp: -1})
-    .exec()
+    
 
 
 
 
-    res.json(posts)
+    return res.json(posts)
  })  
  
  exports.GETpostbyid = asyncHandler(async(req, res) => {
